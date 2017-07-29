@@ -1,5 +1,5 @@
 <project name="test" default="test" basedir=".">
-<target name="test">
+<target name="test message sample">
 <echo message="this buid is executed successfully"/>
 </target>
 </project>
