@@ -1,5 +1,5 @@
 <project name="test" default="test" basedir=".">
 <target name="test">
-<echo message="this buid is executed successfully---Updated build.xml"/>
+<echo message="this buid is executed successfully---testing Updated build.xml"/>
 </target>
 </project>
