@@ -1,0 +1,82 @@
+ - credentials v2.1.8 is missing. To fix, install v2.1.8 or later.
+ - display-url-api v2.0 is missing. To fix, install v2.0 or later.
+ - git v2.4.0 is missing. To fix, install v2.4.0 or later.
+ - github-api v1.80 is missing. To fix, install v1.80 or later.
+ - plain-credentials v1.1 is missing. To fix, install v1.1 or later.
+ - scm-api v2.0.3 is missing. To fix, install v2.0.3 or later.
+ - token-macro v1.11 is missing. To fix, install v1.11 or later
+ 
+ AKIAJP3XX5FL4Q66YN4A
+ 
+export AWS_ACCESS_KEY_ID=AKIAIZ43BHNAUOIBUVSQ
+export AWS_SECRET_ACCESS_EY=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
+
+19832539
+
+19832539 
+
+ansible all -i hosts_ansible -m shell -a "ls /root/bin" -u yasarens -b --extra-vars="ansible_become_pass=${TST}"
+
+ansible-playbook -i hosts jvm.yml --extra-vars "abc=start jvmpattern=wfnsalestraining01" -u yasarens -k --ask-become-pass -c paramiko
+
+ansible-playbook -i hosts jvm.yml --extra-vars "abc=start jvmpattern=wfnsalestraining01" -u yasarens -K -c paramiko
+
+ansible-playbook -i hosts jvm.yml -u yasarens --extra-vars "ansible_become_pass=${my_password}" -c paramiko 
+
+ansible all -i "${PUPPET_MASTER}," -m shell -a "${cmd}" -u ${USERID} -b --extra-vars="ansible_become_pass=${Password}"
+
+/opt/ansible/bin/ansible all -i /home/ansible/ansible_practice/hosts -m shell -a 'cd /home/yasarens/;ls -ltr' -u yasarens -k -c paramiko -----------> working
+
+User ID: apacd_jenkins
+
+jdk-8u74-linux-x64.rpm
+
+rpm -ivh jdk-8u74-linux-x64.rpm
+
+export http_proxy='http://yasarens:fdsfssd@usproxy.es.oneadp.com:8080
+
+/app/<team name>/apache-tomcat
+
+chown apacd_jenkins: -R apacd
+
+true set -o vi export JDK_HOME=/usr/java/jdk1.7.0_67 export JAVA_HOME=$JDK_HOME export JRE_HOME=$JDK_HOME/jre export JENKINS_HOME=/data/jenkins export TOMCAT_VERSION=apache-tomcat-7.0.59 export CATALINA_HOME=/opt/adp/$TOMCAT_VERSION export M2_HOME=/opt/adp/apache-maven-3.3.1 export GROOVY_HOME=/opt/adp/groovy-2.4.5 export PATH=$JDK_HOME/bin:$M2_HOME/bin:$GROOVY_HOME/bin:$PATH"
+
+
+set -o vi
+export JDK_HOME=/usr/lib64/jvm/jre-1.8.0-openjdk
+export JAVA_HOME=$JDK_HOME
+export JRE_HOME=$JDK_HOME/jre
+export CATALINA_HOME=/app/apacd/apache-tomcat-8.5.20
+export PATH=$JDK_HOME/bin:$PATH
+
+
+export JENKINS_HOME=/data/jenkins
+
+
+chage -I -1 -m 0 -M 99999 -E -1
+
+export ANSIBLE_HOME=/opt/ansible/ansible
+export PATH=$PATH:$ANSIBLE_HOME/bin 
+ansible all -i /home/apacd_jenkins/ansible/hosts_ansible -m ping
+
+ansible-playbook -i inventory playbook.yml --extra-vars="var1=${VALUE1} var2=${VALUE2}"
+
+=========================================================================================================
+ansible@cdldepap01:~/ansible/srinivas_ansible> cat useradd.yml
+---
+- hosts: all
+  become_user: root
+  tasks:
+   - name: add new user
+     user: name={{ user_name }} group=ansible shell=/bin/bash
+ #  - name: remove user
+#     user: name=testid2 state=absent remove=yes
+   - name: Add deploy user to sudoers
+     lineinfile: dest=/etc/sudoers
+              regexp="{{ user_name }} ALL"
+              line="{{ user_name }} ALL=(ALL) ALL"
+              state=present
+=========================================================================================================
+Ansible SSH Keys Automation
+==============================================================================
+ansible-playbook -i hosts_test ssh_keys_v4.yml -u yasarens -k -v
