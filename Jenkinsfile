@@ -12,6 +12,7 @@ pipeline {
 mvn --version
 hostname -i
 id'''
+        sh 'echo "this is step 2in Build Stage"'
       }
     }
   }
